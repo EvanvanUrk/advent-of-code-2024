@@ -1,0 +1,14 @@
+{
+    "name": "evanvanurk/advent-of-code-2023",
+    "authors": [
+        {
+            "name": "Evan van Urk",
+            "email": "evan@skrepr.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AoC\\": "src/"
+        }
+    }
+}
