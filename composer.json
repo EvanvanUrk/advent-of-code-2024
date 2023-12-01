@@ -10,5 +10,9 @@
         "psr-4": {
             "AoC\\": "src/"
         }
+    },
+    "require": {
+        "illuminate/collections": "^8.83",
+        "symfony/var-dumper": "^5.4"
     }
 }

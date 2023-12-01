@@ -4,18 +4,19 @@ include_once 'vendor/autoload.php';
 
 use AoC\Solution;
 
-$day = (int) $argv[1];
-$class = '\AoC\Day' . $day;
+$start = \AoC\Util::getTime();
 
-$solution = new $class();
+$day = (int) $argv[1];
+
+$input = \AoC\Util::getInput($day, $argv[2] ?? 'day');
+
+$class = '\AoC\Day' . $day;
+$solution = new $class($input);
 
 if (false === (is_object($solution)) || !($solution instanceof Solution)) {
     throw new Exception('Solution for day %d does not exist or does not implement AoC\Solution');
 }
 
-$input = \AoC\Util::getInput($day, $argv[2] ?? 'day');
-
-$start = \AoC\Util::getTime();
 $part1 = $solution->part1($input);
 $part1Runtime = \AoC\Util::getTime() - $start;
 
